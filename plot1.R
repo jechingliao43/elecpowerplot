@@ -1,5 +1,7 @@
 library(dplyr)
 
+download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", destfile = "elec.zip")
+unzip("elec.zip")
 data <- read.table("household_power_consumption.txt", sep = ";")
 names(data) <- data[1,]
 data <- data[-1,]
